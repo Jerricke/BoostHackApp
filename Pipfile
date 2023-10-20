@@ -14,6 +14,7 @@ flask-bcrypt = "*"
 importlib-metadata = "*"
 bcrypt = "*"
 flask = "*"
+
 [dev-packages]
 
 [requires]

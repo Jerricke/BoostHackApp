@@ -8,7 +8,7 @@ from config import db, bcrypt
 
 
 # Models go here!
-class User(db.Model):
+class User(db.Model, SerializerMixin):
     __tablename__ = "users"
 
     id = db.Column(db.Integer, primary_key=True)
@@ -55,7 +55,7 @@ class User(db.Model):
         return bcrypt.check_password_hash(self._password_hash, password.encode("utf-8"))
 
 
-class Connection(db.Model):
+class Connection(db.Model, SerializerMixin):
     __tablename__ = "connections"
 
     id = db.Column(db.Integer, primary_key=True)
