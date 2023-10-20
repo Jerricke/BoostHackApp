@@ -59,7 +59,7 @@ class Connection(db.Model):
     __tablename__ = "connections"
 
     id = db.Column(db.Integer, primary_key=True)
-    owner_id = db.Column(db.Integer, nullable=False, unique=True)
+    owner_id = db.Column(db.Integer, nullable=False)
     name = db.Column(db.String, nullable=False)
     email = db.Column(db.String)
     pfp = db.Column(db.String)
